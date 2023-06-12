@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RED SOCIAL</title>
+        <meta charset="UTF-8"/>
+        <link href="css/estilo.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div id="logo">
+                <img src="img/logo.jpg" alt="LOGO">
+            </div>
+        </header>
+
+        <section id="formulario">
+            <form name="Nuevo usuario" method="post" action="php/ConexionCrearUsuario.php">
+                <h2>Nickname:</h2><br>
+                <input type="text" name="Nickname" pattern="[a-zA-Z0-9]+" placeholder="Ingrese su nombre" required><br>
+                <h2>Contraseña:</h2><br>
+                <input type="password" name="contraseña" maxlength="20" autocomplete="new-password" placeholder="Ingrese su contraseña" required><br>                
+                <h2>Nombre:</h2><br>
+                <input type="text" name="nombre" placeholder="Ingrese su Nombre" required><br>                
+                <h2>Apellido:</h2><br>
+                <input type="password" name="apellido" placeholder="Ingrese sus Apellidos" required><br>
+                <h2>Email:</h2><br>
+                <input type="email" name="correo" placeholder="Ingrese su Email" required><br>   
+                <h2>Edad:</h2><br>
+                <input type="number" name="Edad" min="18" placeholder="Ingrese su Edad" required><br>   
+                <h2>Descripcion</h2><br>
+                <textarea name="descripcion" placeholder="Ingrese su descripcion" required></textarea><br>
+
+                <input type="submit" name="enviar" class="boton" value="Registrate">
+                <input type="reset" class="boton" value="Borrar">
+                
+                <hr>
+            </form>
+        </section>
+            
+        <section id="formulario2">
+            <form name="Nuevo usuario" method="post" action="php/ConexionCrearUsuario.php">
+                <h2>Nickname:</h2><br>
+                <input type="text" name="Nickname" placeholder="Ingrese su Nickname" required><br>
+                <h2>Contraseña:</h2><br>
+                <input type="password" name="contraseña" autocomplete="off" placeholder="Ingrese su contraseña" required><br>                
+            
+                <input type="submit" name="enviar" class="boton" value="Iniciar Sesion">
+                
+                <hr>
+            </form>
+        </section>
+
+
+
+        <footer>
+            <p class="copyright">&copy Copyright DovLife - 2023</p>
+        </footer>
+    </body>
+</html>
