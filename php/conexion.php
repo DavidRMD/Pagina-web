@@ -1,8 +1,8 @@
 <?php
     //declarando variables para la conexión
-    $servidor= "localhost";
+    $servidor= "localhost:3307";
     $usuario= "root";
-    $pws= "1234";
+    $pws= "";
     $BD= "redsocial";
 
     //Creando la conexion
