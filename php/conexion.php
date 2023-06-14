@@ -2,10 +2,8 @@
     //declarando variables para la conexión
     $servidor= "localhost";
     $usuario= "root";
-    $pws= "";
+    $pws= "1234";
     $BD= "redsocial";
-
-
 
     //Creando la conexion
     $conexion= mysqli_connect($servidor, $usuario, $pws, $BD);
