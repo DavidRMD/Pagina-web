@@ -1,3 +1,9 @@
+<?php
+    include("../php/conexion.php");
+    include("../php/ValidarSesion.php");
+?>
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -6,6 +12,7 @@
         <link href="css/estilo.css" rel="stylesheet">
     </head>
     <body>
+            
         <header>
             <div id="logo">
                 <img src="img/logo.jpg" alt="LOGO">
@@ -18,6 +25,7 @@
                     <li><a href="amigos.html">Mis amigos</a></li>
                     <li><a href="fotos.html">Mis fotos</a></li>
                     <li><a href="buscar.html">Buscar Amigos</a></li>
+                    <li><a href="http://localhost/PaginaWeb/php/CerrarSesion.php">Cerrar Sesion</a></li>
                 </ul>
 
             </nav>
@@ -31,26 +39,31 @@
 
         <section id="Misamigos">
             <section id="recuadros">
+
+
+                <?php
+                    $consulta= "Selext *
+                                FROM persona P
+                                where P.Nickname in (Select A.Nickname2
+                                                    From amistad A
+                                                    Where A.Nickname1= '$nickname')
+                                Limit 3";
+                $datos = mysqli_query($conexion, $consulta);
+
+                while($fila = mysqlifetch_array($datos)){
+
+                }
+                ?>
+
+
                     <section class="recuadro">
-                        <img src="img/usuario.png" height="150">
-                        <h2>Amigo1</h2>
-                        <p>Descripcion</p> <a href="" class="boton">Ver perfil</a> <br><br>
+                        <img src="<?php echo $fila['FotoPerfil']?>" height="150">
+                        <h2><?php echo $fila['Nombre'] . " " .$fila['Apellidos'] ?></h2>
+                        <p class="parrafo"><?php echo $fila['Descripcion']?></p> 
+                        <a href="<?php echo "perfil.php?nickname=".$fila['Nickname']?> "class="boton">Ver perfil</a> <br><br>
 
                     </section>
                 
-
-                <section class="recuadro">
-                    <img src="img/usuario.png" height="150">
-                    <h2>Amigo2</h2>
-                    <p>Descripcion</p> <a href="" class="boton">Ver perfil</a> <br><br>
-
-                </section>
-
-                <section class="recuadro">
-                    <img src="img/usuario.png" height="150">
-                    <h2>Amigo3</h2>
-                    <p>Descripcion</p> <a href="" class="boton">Ver perfil</a> <br><br>
-                </section>
             </section>
 
         </section>
