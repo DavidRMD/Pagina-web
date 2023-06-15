@@ -13,20 +13,20 @@
         </header>
 
         <section id="formulario">
-            <form name="Nuevo usuario" method="POST" action="php/ConexionCrearUsuario.php">
-                <h2>Nickname:</h2><br>
+            <form name="Nuevo usuario" method="POST" action="http://localhost/PaginaWeb/php/ConexionCrearUsuario.php">
+                <h2>Nickname:</h2>
                 <input type="text" name="nickname" pattern="[a-zA-Z0-9]+" placeholder="Ingrese su nombre" required><br>
-                <h2>Contraseña:</h2><br>
+                <h2>Contraseña:</h2>
                 <input type="password" name="contraseña" maxlength="20" autocomplete="new-password" placeholder="Ingrese su contraseña" required><br>                
-                <h2>Nombre:</h2><br>
+                <h2>Nombre:</h2>
                 <input type="text" name="nombre" placeholder="Ingrese su Nombre" required><br>                
-                <h2>Apellido:</h2><br>
+                <h2>Apellido:</h2>
                 <input type="text" name="apellidos" placeholder="Ingrese sus Apellidos" required><br>
-                <h2>Email:</h2><br>
+                <h2>Email:</h2>
                 <input type="email" name="correo" placeholder="Ingrese su Email" required><br>   
-                <h2>Edad:</h2><br>
+                <h2>Edad:</h2>
                 <input type="number" name="edad" min="18" placeholder="Ingrese su Edad" required><br>   
-                <h2>Descripcion</h2><br>
+                <h2>Descripcion</h2>
                 <textarea name="descripcion" placeholder="Ingrese su descripcion" required></textarea><br>
 
                 <input type="submit" name="enviar" class="boton" value="Registrate">

@@ -14,6 +14,6 @@
         die("Connection failed: " . mysqli_connect_error());
     }
     else{
-        echo"conexion exitosa";
+        echo"<br><h1>conexion exitosa</h1><br>";
     }
 ?>
