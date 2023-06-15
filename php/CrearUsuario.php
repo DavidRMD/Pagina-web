@@ -43,6 +43,4 @@
         echo"<a href='index.html'>Intentalo de nuevo.</a></div>";
     }
 
-    mysqli_close($conexion);
-
 ?>

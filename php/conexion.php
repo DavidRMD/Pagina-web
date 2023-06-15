@@ -16,5 +16,4 @@
     else{
         echo"conexion exitosa";
     }
-
 ?>
